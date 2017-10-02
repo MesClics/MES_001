@@ -3,7 +3,7 @@
     //variables de bases
     $home_url = "http://mesclics/";
     //mise en ligne : décommenter :
-    // $home_url = "http://www.mesclics.fr";
+    // $home_url = "http://www.mesclics.fr/";
     //Fonction de traitement des formulaires
     function formValid($post){
         if($post){
