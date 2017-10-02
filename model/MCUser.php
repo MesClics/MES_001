@@ -5,14 +5,18 @@
         private $login;
         private $password;
         private $email;
+        private $name;
         
-        public function __construct($login, $password = null, $email = null){
+        public function __construct($login, $password = null, $email = null, $name = null){
             $this->setLogin($login);
             if($password){
                 $this->setPassword($password);
             }
             if($email){
                 $this->setEmail($email);
+            }
+            if($name){
+                $this->setName($name);
             }
         }
 
@@ -28,6 +32,10 @@
             return $this->email;
         }
 
+        public function name(){
+            return $this->name;
+        }
+
         private function setLogin($login){
             $this->login = $login;
         }
@@ -40,12 +48,17 @@
             $this->password = $password;
         }
 
+        private function setName($name){
+            $this->name = $name;
+        }
+
         public function signIn(MCClient $client){
             $cryptedPass = sha1($this->password().$client->ref());
             if($cryptedPass === $client->password()){
                 $_SESSION['user']['login'] = $this->login();
                 $_SESSION['user']['password'] = true;
                 $_SESSION['user']['email'] = $client->email();
+                $_SESSION['user']['name'] = $client->name();
             } else{
                 new MCFlashMessage('Error', 'L\'identifiant et/ou le mot de passe ne sont pas corrects', 'sign-in');
             }

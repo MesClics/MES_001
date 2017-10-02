@@ -26,7 +26,7 @@ if(!isset($_SESSION['user']) OR !$_SESSION['user']['password']){
 } else{
 ?>
     <div class="sign-out">
-        <h3>Vous êtes connecté sur votre compte client</h3>
+        <h3>Vous êtes connecté sur votre compte client <?php echo $_SESSION['user']['name'];?></h3>
         <?php include($vars['forms']['sign-out']);?>
     </div>
 <?php

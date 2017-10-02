@@ -47,10 +47,6 @@
             return $this->lastConnection;
         }
 
-        public function is_logged(){
-        }
-
-
         protected function setRef($ref){
             $this->ref = $ref;
         }
