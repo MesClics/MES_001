@@ -1,6 +1,4 @@
 <?php
-var_dump($_SESSION);
-
      if(!$_SESSION['user']['password']){
         header('Location: ' . $home_url);
     }
