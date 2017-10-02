@@ -23,9 +23,7 @@
         }
     }
 //on active la validation des formulaires
-var_dump($_SESSION);
 formValid($_POST);
-var_dump($_SESSION);
 
     //Fonction de login
     function MCsignIn($post){       
