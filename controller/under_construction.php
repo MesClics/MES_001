@@ -16,6 +16,7 @@ $folder_name = "under_construction";
    );
    //FORMS
    $vars['forms']['sign-in'] = "./view/templates/forms/sign-in.php";
+   $vars['forms']['sign-out'] = "./view/templates/forms/sign-out.php";
 
 //TEMPLATES
    $templates = array(

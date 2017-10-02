@@ -14,8 +14,20 @@
         <p class="credits">2017</p>
     </aside>       
 </div>
-
-<div class="sign-in">   
-    <h3>Vous avez déjà un compte client ? connectez-vous</h3>
-    <?php include($vars['forms']['sign-in']);?>     
-</div>
+<?php
+if(!isset($_SESSION['user']) OR !$_SESSION['user']['password']){
+?>
+    <div class="sign-in">   
+        <h3>Vous avez déjà un compte client ? connectez-vous</h3>
+        <?php include($vars['forms']['sign-in']);?>     
+    </div>
+<?php
+} else{
+?>
+    <div class="sign-out">
+        <h3>Vous êtes connecté sur votre compte client</h3>
+        <?php include($vars['forms']['sign-out']);?>
+    </div>
+<?php
+}
+?>
