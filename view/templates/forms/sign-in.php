@@ -7,5 +7,5 @@
     <label for="sign-in_password">mot de passe</label>
     <input type="password" id="sign-in_password" name="sign-in_password">
 
-    <input type="submit" value="se conncter">
+    <input type="submit" value="me connecter">
 </form>

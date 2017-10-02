@@ -8,10 +8,10 @@ $folder_name = "under_construction";
    $vars['page']['title'] = "Site en construction";
    $vars['page']['description'] = "mesclics.fr - conception et réalisation web, graphisme et identité visuelle.";
    $vars['page']['styles'] = array(
-       array(
-           'folder'=> null,
-           'file'=> 'under_construction.css',
-           'media'=> 'all'
+        array(
+            'folder'=> null,
+            'file'=> 'under_construction.css',
+            'media'=> 'all'
         )
    );
    //FORMS

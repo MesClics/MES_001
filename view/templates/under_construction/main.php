@@ -14,6 +14,7 @@
         <p class="credits">2017</p>
     </aside>       
 </div>
+<!-- Formulaires de connexion / déconnexion -->
 <?php
 if(!isset($_SESSION['user']) OR !$_SESSION['user']['password']){
 ?>
