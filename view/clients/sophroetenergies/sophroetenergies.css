@@ -1,0 +1,15 @@
+/*COULEURS*/
+.backgroundColor-ffffff{background-color: #ffffff;}
+.backgroundColor-51455a{background-color: #51455a;}
+.backgroundColor-edebec{background-color: #edebec;}
+.backgroundColor-DCA53A{background-color: #DCA53A;}
+.backgroundColor-edebec{background-color: #edebec;}
+.backgroundColor-D2D4EB{background-color: #D2D4EB;}
+.backgroundColor-EDD8D8{background-color: #EDD8D8;}
+/*FONTS*/
+.fontFamily-Quicksand{font-family: 'Quicksand';}
+.fontFamily-Pacifico{font-family: 'Pacifico';}
+/*TYPO DES ELEMENTS*/
+.sample.font-paragraph{font-family:'Quicksand'; font-size: 18px; font-weight: 400; line-height: 28px; letter-spacing: 2px; text-align: center;}
+.sample.font-GrandsTitres{font-family: 'Pacifico'; font-size: 30px; font-weight: 400; line-height: 36px; text-align: center;} 
+.sample.font-Titres{font-family: 'Quicksand'; font-size: 14px; font-weight: 700; line-height: 28px; text-transform: uppercase; text-align: center;}

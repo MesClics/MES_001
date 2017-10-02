@@ -1,0 +1,167 @@
+a,p,h1,h2,h3,h4,h5,h6,ul,li{
+    margin : 0;
+    padding : 0;}
+
+a{
+    text-decoration : none;
+    color : inherit;}
+
+h1{
+    font-weight: 300;
+    font-size: 1.6em;}
+
+body{
+    margin : 0;
+    padding : 0;
+    font-family : 'Titillium Web';}
+
+#main{
+    height : 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    background-color : #ffffff;}
+
+#col1{
+    order: 1;
+    width : 20%;
+    align-self: stretch;
+    padding : 0.3em;
+    background-color: #eeeeee;
+    color : #111111;
+    font-size  : 1em;
+    overflow : hidden;
+   /* box-shadow: -5px 0px 10px 5px #cccccc;*/
+    }
+    
+#col1 h1{
+text-align: center;}
+
+#col2{
+    width : 80%;
+    order: 2;
+    padding-left: 1em;}
+
+#menu{
+    display: flex;
+    flex-direction : column;
+    list-style-type: none;
+    padding : 0;
+    padding-right : 0.5em;
+    vertical-align: middle;}
+
+#menu li{
+    display : inline-flex;
+    width : 100%;
+    padding : 0.5em;
+    list-style: none;}
+    
+.sous_menu{
+    background-color: #eeeeee;
+    color : #111111;
+    list-style-type: none;
+    padding-left : 1.5em;
+    padding-right: 1.5em;}
+
+.sous_menu li{
+    margin-top : 1em;
+    border-bottom: 0.1em solid #eeeeee;
+    background-color: rgba(245,245,245,0.8);
+    font-size: 0.9em;
+    transition:All 0.3s ease;}
+    /*hover*/
+    .sous_menu li:hover{
+        color : #eeeeee;
+        background-color: rgba(0,0,0,0.8);
+        padding-left : 1em;
+        padding-bottom : 0.1em;
+        border-left: solid;
+        border-left-width: 0.2em;
+        border-left-color: #098FE3;
+        overflow: hidden;
+        }
+
+.sous_menu ul{
+    padding-left : 0.5em;
+    font-size: 0.8em;}
+
+.sous_menu ul li{
+    min-height : 2em;
+    background-color: #eeeeee;
+    margin-top : 0.2em;
+    transition:margin-left 0.3s ease;}
+    /*hover*/
+    .sous_menu ul li:hover{
+        margin-left: -0.5em;}
+    
+
+/**FORMULAIRES**/
+#col2 form{
+    width : auto;
+    margin : 1.5em;
+    padding : 1.5em;
+    background-color: #eeeeee;}
+
+input{
+    display: block;}
+
+input[type="submit"]{
+    border : 0.1em solid rgba(0,0,0,0.8);;
+    background-color: rgba(0,0,0,0.8);
+    color : #eeeeee;
+    padding : 0.3em;
+    margin-top: 0.5em;
+    font-family: 'Titillium Web';}
+
+input[type="radio"]{
+    display: inline-block;}
+
+ /**ICONES DE MENU**/
+#menu li.competition:before{
+content: url('../view/images/icones/coupe.png');
+opacity: 0.2;
+padding-right : 0.5em;}
+
+#menu li.site:before{
+content: url('../view/images/icones/pc.png');
+opacity: 0.2;
+padding-right : 0.8em;}
+
+#menu li.compet:before{
+content: url('../view/images/icones/coupe.png');
+opacity: 0.2;
+padding-right : 0.5em;}
+    /*hover*/
+    #menu li.compet:hover:before{
+        content: url('../view/images/icones/coupe_blanc.png');
+        opacity: 0.8;}
+
+#menu li.users:before{
+content: url('../view/images/icones/bonhommedouble.png');
+opacity: 0.2;
+padding-right : 0.8em;}
+    /*hover*/
+    #menu li.users:hover:before{
+        content: url('../view/images/icones/bonhommedouble_blanc.png');
+        opacity: 0.8;}
+
+#menu li.matchs:before{
+content: url('../view/images/icones/bonhommedouble.png');
+opacity: 0.2;
+padding-right : 0.8em;}
+    /*hover*/
+    #menu li.matchs:hover:before{
+        content: url('../view/images/icones/bonhommedouble_blanc.png');
+        opacity: 0.8;}
+
+#menu li.bareme:before{
+content: url('../view/images/icones/bonhommedouble.png');
+opacity: 0.2;
+padding-right : 0.8em;}
+    /*hover*/
+    #menu li.bareme:hover:before{
+        content: url('../view/images/icones/bonhommedouble_blanc.png');
+        opacity: 0.8;}

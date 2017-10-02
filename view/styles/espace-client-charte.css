@@ -1,0 +1,199 @@
+/*resets*/
+.underline{text-decoration: underline;}
+.italic{font-style:	italic;}
+.bold{font-weight: bold;}
+
+#elements{
+	-ms-grid-column: 1 / span 12; grid-column: 1 / span 12;
+	grid-row: 2 / span 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: space-between;
+}
+
+.section{
+	text-align: left;
+	width: 100%; min-width: 400px;
+	margin-bottom: 20vh;
+}
+
+.sous-section{
+	width: 100%;
+	margin: 2vh 1vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.items-list{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.item{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 3vh;
+}
+
+
+dl{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin-left : 1vw;
+}
+
+dt{
+	font-size: .9rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+dd{
+	width: 100%;
+}
+
+.critere{
+	font-weight: 300;
+}
+	.critere:after{
+		content: ' : ';
+		font-weight: 400;
+	}
+
+.valeur{
+	font-weight: 500;
+}
+
+.couleur{
+	width: 50%;
+}
+
+.couleur .sample{
+	width: 5vw; min-width: 80px; max-width: 40%;
+	height: 5vw; min-height: 80px; max-width: 40%;
+	border-radius: 50%;
+}
+
+.couleur dl{
+	width: 60%;
+}
+
+.couleur .critere:not(.contenu):after{
+	content: none;
+}
+
+.typo{
+	width: 50%
+}
+
+
+.typo .sample{
+	width: 40%; max-width: 40%;
+	font-size: 2rem;
+	line-height: 2.5rem;
+	vertical-align: middle;
+}
+
+.typo dl{
+	width: 50%;
+}
+
+.LOGO{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.LOGO h2,
+.LOGO ul{
+	width: 100%;
+}
+
+.LOGO ul{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.LOGO .sous-section{
+	width: 45%;
+	min-width: 350px;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 2vh 2vw;
+}
+
+.LOGO .items-list{
+	text-align: center;
+}
+
+.LOGO .general{
+	width: 100%;
+}
+
+.LOGO .general .items-list{
+	text-align: left;
+}
+
+.LOGO dl{
+	width: 100%;
+}
+
+.LOGO dt{
+	margin: 0 auto;
+}
+
+.general dd{
+	margin-left: 1vw;
+}
+
+.general dt{
+	margin: 0;
+}
+
+.logo{
+	width: 100%;
+}
+
+.logo .sample{
+	width: 100%; max-width: 100%;
+	height: auto;
+	margin-bottom: 10vh;
+}
+
+.grafic .sample{
+	width: 30%;
+}
+
+.grafic .sample img{
+	max-width: 100%;
+}
+
+.grafic dl{
+	width: 40%;
+}
+
+.documents .sample{
+	width: 30%;
+}
+
+.documents .sample img{
+	max-width: 45%;
+}
+
+.documents dl{
+	width: 40vw;
+}

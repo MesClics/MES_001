@@ -1,0 +1,3 @@
+#ignore all htaccess et htpasswd
+*.htaccess
+*.htpasswd

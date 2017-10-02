@@ -1,0 +1,13 @@
+/*COULEURS*/
+.backgroundColor-292b2c{background-color: #292b2c;}
+.backgroundColor-ff384e{background-color: #ff384e;}
+.backgroundColor-696462{background-color: #696462;}
+.backgroundColor-aaa091{background-color: #aaa091;}
+.backgroundColor-eee7e0{background-color: #eee7e0;}
+.backgroundColor-f5f5f5{background-color: #f5f5f5;}
+/*FONTS*/
+.fontFamily-OpenSans{font-family: 'Open Sans';}
+.fontFamily-Montserrat{font-family: 'Montserrat';}
+/*TYPO DES ELEMENTS*/
+.sample.font-paragraph{font-family:'Montserrat'; font-size: 18px; font-weight: 300; line-height: 32px;}
+.sample.font-h2Titles{font-family: 'Open Sans'; font-size: 20px; font-weight: 700; letter-spacing: 1px; line-height: 40px;}
