@@ -14,7 +14,16 @@
 
             $client = $this->db->select('*', 'mc_clients', 'ref = :ref', 'id', 'ASC', $args);
             
-            return new MCClient($ref, $client[0]['id'], $client[0]['name'], $client[0]['login'], $client[0]['password'], $client[0]['email'], $client[0]['last_connection']);
+            return new MCClient(
+                $ref,
+                $client[0]['id'],
+                $client[0]['name'],
+                $client[0]['login'],
+                $client[0]['password'],
+                $client[0]['email'],
+                $client[0]['last_connection'],
+                $client[0]['folder_name']
+            );
         }
 
         public function getFromLogin($login){
@@ -24,7 +33,16 @@
 
             $client = $this->db->select('*', 'mc_clients', 'login = :login', 'id', 'ASC', $args);
             if($client){
-                return new MCClient($client[0]['ref'], $client[0]['id'], $client[0]['name'], $client[0]['login'], $client[0]['password'], $client[0]['email'], $client[0]['last_connection']);
+                return new MCClient(
+                    $client[0]['ref'],
+                    $client[0]['id'],
+                    $client[0]['name'],
+                    $client[0]['login'],
+                    $client[0]['password'],
+                    $client[0]['email'],
+                    $client[0]['last_connection'],
+                    $client[0]['folder_name']
+                );
             } else{
                 return null;
             }

@@ -59,6 +59,7 @@
                 $_SESSION['user']['password'] = true;
                 $_SESSION['user']['email'] = $client->email();
                 $_SESSION['user']['name'] = $client->name();
+                $_SESSION['user']['folder'] = $client->folderName();
             } else{
                 new MCFlashMessage('Error', 'L\'identifiant et/ou le mot de passe ne sont pas corrects', 'sign-in');
             }

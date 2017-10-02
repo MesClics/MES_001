@@ -2,6 +2,7 @@
     class MCClient{
         private $id;
         private $name;
+        private $folderName;
         private $ref;
         private $lastConnection;
         private $login;
@@ -9,7 +10,7 @@
         private $email;
         
 
-        public function __construct($ref, $id, $name, $login = null, $password = null, $email = null, $last_connection = null){
+        public function __construct($ref, $id, $name, $login = null, $password = null, $email = null, $last_connection = null, $folder_name = null){
             $this->setRef($ref);
             $this->setId($id);
             $this->setName($name);
@@ -17,6 +18,7 @@
             $this->setPassword($password);
             $this->setEmail($email);
             $this->setLastConnection($last_connection);
+            $this->setFolderName($folder_name);
         }
 
         public function ref(){
@@ -47,6 +49,10 @@
             return $this->lastConnection;
         }
 
+        public function folderName(){
+            return $this->folderName;
+        }
+
         protected function setRef($ref){
             $this->ref = $ref;
         }
@@ -73,6 +79,10 @@
 
         protected function setLastConnection($lastConnection){
             $this->lastConnection = new DateTime($lastConnection);
+        }
+
+        protected function setFolderName($folder_name){
+            $this->folderName = $folder_name;
         }
     }
 ?>

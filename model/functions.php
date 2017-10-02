@@ -9,7 +9,8 @@
             //on passe en revue les types de formulaire et on appelle leur fonction correspondante
             switch ($form) {
                 case 'sign-in':
-                    MCsignIn($post);                    
+                    MCsignIn($post);
+                    header('Location: ' . $_SESSION['user']['folder'] . '/');                    
                 break;
 
                 case 'sign-out':
@@ -42,7 +43,6 @@ formValid($_POST);
             require_once('MCFlashMessage.php');
             $flash = new MCFlashMessage('error', 'Vous n\'avez pas encore de compte client chez mesclics.fr', 'sign-in');
         }
-
     }
 
     //Fonction de sign-out
