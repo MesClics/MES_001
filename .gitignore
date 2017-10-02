@@ -1,3 +1,5 @@
 #ignore all htaccess et htpasswd
 *.htaccess
 *.htpasswd
+#ignorer les infos de connexion à la database
+model/database.php
