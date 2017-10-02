@@ -1,16 +1,27 @@
 <?php
+var_dump($_SESSION);
+
+     if(!$_SESSION['user']['password']){
+        header('Location: ' . $home_url);
+    }
     require_once('./model/database.php');
     require_once('./model/MCClient.php');
     require_once('./model/MCClientManager.php');
    
     //CONFIG
+    //ref client
+    $ref = 'SOP_001';
     //nom des dossiers concernant ce client dans l'arborescence
-    $folder_name = "sophroetenergies";
+    $folder_name = 'sophroetenergies';
+
+    if($folder_name !== $_SESSION['user']['folder']){
+        header('Location: ' . $home_url);
+    }
 
     // VARIABLES
     $db = new DatabaseConnection();
     $clientManager = new MCClientManager($db);
-    $client = $clientManager->get('SOP_001');
+    $client = $clientManager->get($ref);
 
     $vars = array();
         //VARIABLES ESPACE CLIENT
@@ -37,8 +48,8 @@
                 'media'=> 'print'
             ),
             array(
-                'folder'=> 'clients/'.$folder_name,
-                'file'=> $folder_name.'.css',
+                'folder'=> 'clients/' . $folder_name,
+                'file'=> $folder_name . '.css',
                 'media'=> 'all'
             )
         );

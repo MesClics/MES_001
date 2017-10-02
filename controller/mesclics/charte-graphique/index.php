@@ -1,17 +1,25 @@
 <?php
-    
+    if(!$_SESSION['user']['password']){
+        header('Location: ' . $home_url);
+    }
     require_once('./model/database.php');
     require_once('./model/MCClient.php');
     require_once('./model/MCClientManager.php');
    
     //CONFIG
+    //ref client
+    $ref = 'MES_001';
     //nom des dossiers concernant ce client dans l'arborescence
-    $folder_name = "mesclics";
+    $folder_name = 'mesclics';
+
+    if($folder_name !== $_SESSION['user']['folder']){
+        header('Location: ' . $home_url);
+    }
 
     // VARIABLES
     $db = new DatabaseConnection();
     $clientManager = new MCClientManager($db);
-    $client = $clientManager->get('MES_001');
+    $client = $clientManager->get($ref);
 
     //VARIABLES ESPACE CLIENT
     $vars['client'] = $client;
@@ -37,8 +45,8 @@
             'media'=> 'print'
         ),
         array(
-            'folder'=> 'clients/'.$folder_name,
-            'file'=> 'mesclics.css',
+            'folder'=> 'clients/' . $folder_name,
+            'file'=> $folder_name . '.css',
             'media'=> 'all'
         )
     );

@@ -1,5 +1,8 @@
 <?php
     session_start();
+    //variables de bases
+    $home_url = "http://mesclics/";
+    
     //Fonction de traitement des formulaires
     function formValid($post){
         if($post){
