@@ -3,15 +3,13 @@
         private $database;
 
         function __construct(){
+            //dev en local
             $host = 'localhost';
             $user = 'root';
             $password = '';
             $db_name ='mesclics';
-            //mise en ligne
-            // $host = 'sql1.cluster1.easy-hebergement.net';
-            // $user = 'treecup3';
-            // $password = 'MCdb3211';
-            // $db_name ='treecup3';
+            //on écrase la config en incluant le fichier de config
+            include('database-config.php');
 
             try
             {
