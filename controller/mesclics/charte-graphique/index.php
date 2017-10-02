@@ -52,6 +52,7 @@
     );
     $vars['page']['images-folder'] = "/./view/clients/".$folder_name."/images/";
     $vars['page']['documents-folder'] = "/./view/clients/".$folder_name."/documents/";
+    $vars['page']['fonts'] = '';
 
     //TEMPLATES
     $templates = array(

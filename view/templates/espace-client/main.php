@@ -8,7 +8,6 @@
 <nav>
     <ul>
         <li><a href="<?php echo $home_url.$folder_name;?>/contrat/">Mon contrat</a></li>
-
         <li><a href="<?php echo $home_url.$folder_name;?>/charte-graphique/">Ma charte graphique</a></li>
     </ul>
 </nav>

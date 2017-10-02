@@ -23,7 +23,12 @@
     <meta name="msapplication-TileImage" content="http://www.mesclics.fr/view/images/favicon-144.png?v=1.0">
     <meta name="msapplication-config" content="http://www.mesclics.fr/view/images/browserconfig.xml">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900|Open+Sans:300,400,600,700,800" rel="stylesheet">
-	<?php
+    <?php
+        if(isset($vars['page']['fonts'])){
+            echo $vars['page']['fonts'];
+        }
+    ?>
+    <?php
         foreach($vars['page']['styles'] AS $style){
             if($style['folder']){
                 echo '<link rel="stylesheet" media="'.$style['media'].'" href="/./view/'.$style['folder'].'/'.$style['file'].'"type="text/css">'."\r\n";

@@ -1,7 +1,5 @@
 <?php
-var_dump($_SESSION);
-
-     if(!$_SESSION['user']['password']){
+    if(!$_SESSION['user']['password']){
         header('Location: ' . $home_url);
     }
     require_once('./model/database.php');
@@ -23,14 +21,14 @@ var_dump($_SESSION);
     $clientManager = new MCClientManager($db);
     $client = $clientManager->get($ref);
 
+    // VARIABLES
     $vars = array();
         //VARIABLES ESPACE CLIENT
         $vars['client'] = $client;
         
         //PAGE CONFIG
-        $vars['page']['title'] = "Charte Graphique | mesclics.fr";
-        $vars['page']['description'] = "Charte Graphique | mesclics.fr";
-        //les fichiers css (attention à l'ordre)
+        $vars['page']['title'] = "Espace Client | mesclics.fr";
+        $vars['page']['description'] = "Espace Client | mesclics.fr";
         $vars['page']['styles'] = array(
             array(
                 'folder' => null,
@@ -38,30 +36,16 @@ var_dump($_SESSION);
                 'media'=> 'all'
             ),
             array(
-                'folder' => null,
-                'file'=> 'espace-client-charte.css',
-                'media'=> 'all'
-            ),
-            array(
-                'folder' => null,
-                'file'=> 'espace-client-charte-print.css',
-                'media'=> 'print'
-            ),
-            array(
-                'folder'=> 'clients/' . $folder_name,
+                'folder'=> 'clients',
                 'file'=> $folder_name . '.css',
                 'media'=> 'all'
             )
         );
-        $vars['page']['images-folder'] = "/./view/clients/".$folder_name."/images/";
-        $vars['page']['documents-folder'] = "/./view/clients/".$folder_name."/documents/";
-        $vars['page']['fonts'] = '<link href="https://fonts.googleapis.com/css?family=Pacifico|Quicksand:300,400,500,700" rel="stylesheet">';
 
     //TEMPLATES
     $templates = array(
         "espace-client/doctype.php",
-        "espace-client/charte-graphique/main.php",
-        "espace-client/charte-graphique/".$folder_name.'.php'
+        "espace-client/main.php"
     );
 
     foreach($templates AS $template){
