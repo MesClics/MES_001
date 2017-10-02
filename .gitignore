@@ -2,4 +2,4 @@
 *.htaccess
 *.htpasswd
 #ignorer les infos de connexion à la database
-model/database-config
+model/database-config.php
