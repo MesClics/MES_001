@@ -1,4 +1,6 @@
 <?php
+	//on inclue le fichier functions
+	require('model/functions.php');
 	// router
 	if(isset($_GET['url']) && !empty($_GET['url'])){
 		$url = addslashes($_GET['url']).'.php';

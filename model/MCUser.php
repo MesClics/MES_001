@@ -1,5 +1,5 @@
 <?php
-    require_once ('MCMessage.php');
+    require_once ('MCFlashMessage.php');
 
     class MCUser{
         private $login;
@@ -43,11 +43,11 @@
         public function signIn(MCClient $client){
             $cryptedPass = sha1($this->password().$client->ref());
             if($cryptedPass === $client->password()){
-                $_SESSION['user']['login'] = $user->login();
+                $_SESSION['user']['login'] = $this->login();
                 $_SESSION['user']['password'] = true;
-                $_SESSION['user']['email'] = $user->email();
+                $_SESSION['user']['email'] = $client->email();
             } else{
-                new MCFlashMessage('Error', 'L\'identifiant et/ou le mot de passe ne sont pas corrects');
+                new MCFlashMessage('Error', 'L\'identifiant et/ou le mot de passe ne sont pas corrects', 'sign-in');
             }
         }
 
@@ -57,13 +57,13 @@
             }
         }
 
-        public function isClient(MCUser $user){
+        public function isClient(){
             require_once('database.php');
             $db = new DatabaseConnection();
 
             require_once('MCClientManager.php');
             $clientManager = new MCClientManager($db);
-            $isClient = $clientManager->exists($user->login());
+            $isClient = $clientManager->exists($this->login());
 
             return $isClient;
         }

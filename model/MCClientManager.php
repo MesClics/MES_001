@@ -23,8 +23,11 @@
             );
 
             $client = $this->db->select('*', 'mc_clients', 'login = :login', 'id', 'ASC', $args);
-        
-            return new MCClient($client[0]['ref'], $client[0]['id'], $client[0]['name'], $client[0]['login'], $client[0]['password'], $client[0]['email'], $client[0]['last_connection']);
+            if($client){
+                return new MCClient($client[0]['ref'], $client[0]['id'], $client[0]['name'], $client[0]['login'], $client[0]['password'], $client[0]['email'], $client[0]['last_connection']);
+            } else{
+                return null;
+            }
         }
 
         public function update(Client $client){
@@ -54,6 +57,6 @@
         }
 
         public function exists($login){
-           return getFromLogin($login);
+           return $this->getFromLogin($login);
         }
     }
