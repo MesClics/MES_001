@@ -63,7 +63,7 @@ input{
     width: 150px;
     height: 2rem;
     padding: 5px;
-    font-size : 1em;
+    font-size : 1rem;
     font-family: 'Montserrat';
     font-weight: 300;
     color: #696462;
@@ -97,6 +97,7 @@ input[type="submit"]:focus{
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 2px;
+    font-size: .8rem;
 }
 
 input[type="submit"]:hover{
